@@ -12,15 +12,17 @@ import Episodes from './components/Episodes/Episodes';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App/>
-  },
-  {
-    path: '/characters',
-    element: <Characters />
-  },
-  {
-    path: '/episodes',
-    element: <Episodes/>
+    element: <App/>,
+    children: [
+      {
+        path: '/characters',
+        element: <Characters />
+      },
+      {
+        path: '/episodes',
+        element: <Episodes/>
+      },
+    ]
   },
 
 ])
@@ -29,8 +31,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
-      {/* <App /> */}
-    {/* </RouterProvider> */}
   </React.StrictMode>
 );
 

@@ -1,19 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Fredoka:wght@300;400;500&display=swap');
 $border-radius-size: 14px;
-$stats: #16ACC9;
-$title: #D2DA4B;
+$text: #D2DA4B;
+$title: #16ACC9;
+$black: #000D03;
 
 body, html {
   margin: 0;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
+  margin-top: 3rem;
 }
 
 .App-header {
-  background-color: #000D03;
+  background-color: $black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,22 +24,29 @@ body, html {
 }
 
 h1, h2, h3 {
-  color: #16ACC9;
+  color: $title;
   font-family: 'Fredoka One', cursive;
 }
 
 p {
-  color: #D2DA4B;
+  color: $text;
   font-family: 'Fredoka', sans-serif;
   font-size: 1.25rem;
 }
 
 a {
-  color: #16ACC9;
+  color: $title;
   font-family: 'Fredoka', sans-serif;
   font-size: 1.25rem;
 }
 
 .swiper-button-next, .swiper-button-prev {
-  color: $stats;
+  color: $text;
+}
+
+.link-container {
+  margin: 2rem 0;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
 }
