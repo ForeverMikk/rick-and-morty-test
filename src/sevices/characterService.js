@@ -12,3 +12,14 @@ export const getTopCharacters = async() => {
         console.log(err);
     }
 }
+
+export const getCharactersByName = async(input) => {
+    try {
+        const response = await axios.get(`${RICK_API}/character/?name=${input}`);
+        const data = response.data;
+
+        return data;
+    } catch (err) {
+        console.log(err);
+    }
+}

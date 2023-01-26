@@ -12,3 +12,14 @@ export const getTopEpisodes = async() => {
         console.log(err);
     }
 }
+
+export const getEpisodesByName = async(input) => {
+    try {
+        const response = await axios.get(`${RICK_API}/episode/?name=${input}`);
+        const data = response.data;
+
+        return data;
+    } catch (err) {
+        console.log(err);
+    }
+}
