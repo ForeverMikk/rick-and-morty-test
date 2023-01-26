@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Fredoka:wght@300;400;500&display=swap');
+$border-radius-size: 14px;
+$stats: #16ACC9;
+$title: #D2DA4B;
 
 body, html {
   margin: 0;
@@ -33,4 +36,8 @@ a {
   color: #16ACC9;
   font-family: 'Fredoka', sans-serif;
   font-size: 1.25rem;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: $stats;
 }

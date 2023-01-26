@@ -6,12 +6,11 @@ $title: #D2DA4B;
     background: white;
     width: 300px;
     display: inline-block;
-    margin: auto;
     border-radius: $border-radius-size + 5;
     position: relative;
     text-align: center;
     box-shadow: -1px 15px 30px -12px #D2DA4B;
-    z-index: 9999;
+    // margin: 0 2rem;
   }
   
   .clash-card__image {
@@ -31,10 +30,6 @@ $title: #D2DA4B;
       object-fit: cover;
       border-top-left-radius: $border-radius-size;
       border-top-right-radius: $border-radius-size;
-
-    //   position: absolute;    
-    //   top: -65px;
-    //   left: -70px;
     }
   }
   
