@@ -1,10 +1,12 @@
 import React from 'react';
+import EpisodesCarousel from './../EpisodesCarousel/EpisodesCarousel';
 
 const Episodes = () => {
     return (
-        <h1>
-        Hole Episodios
-        </h1>
+        <>
+            <h1>Top Episodios</h1>
+            <EpisodesCarousel />
+        </>
     )
 }
 

@@ -3,10 +3,10 @@ import CharactersCarousel from '../CharactersCarousel/CharactersCarousel';
 
 const Characters = () => {
     return (
-        <h1>
-            Hole Characters 
+        <>
+            <h1>Top Characters</h1>
             <CharactersCarousel />
-        </h1>
+        </>
     )
 }
 
