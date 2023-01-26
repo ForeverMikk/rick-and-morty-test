@@ -30,7 +30,7 @@ const EpisodesCarousel = () => {
                         characters={episode.characters}
                         key={episode.id} 
                         />
-                        ))}
+                ))}
             </div>
         </>
     )

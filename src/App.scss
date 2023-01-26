@@ -64,3 +64,13 @@ label {
   margin-top: 5px;
   color: $text !important;
 }
+
+
+
+@media screen and (max-width: 640px) {
+  .link-container {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+  }
+}
