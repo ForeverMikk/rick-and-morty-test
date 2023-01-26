@@ -50,3 +50,17 @@ a {
   display: flex;
   justify-content: space-between;
 }
+
+input[type="text"] {
+  background-color: #16ACC9;
+  opacity: 0.5;
+  border-radius: 5px;
+  padding: 0.5rem;
+  color: $black;
+}
+
+
+label {
+  margin-top: 5px;
+  color: $text !important;
+}
