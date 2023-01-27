@@ -1,11 +1,11 @@
 {
   "background_color": "#ffffff",
+  "theme_color": "000000",
   "categories": ["entertaiment", "animated"],
   "display": "standalone",
-
-
-  
-  "name": "Rick and Morty App",
+  "id": "/v1",
+  "name": "Rick and Morty App PWA Test",
+  "lang": "en-USA",
   "icons": [
     {
       "src": "favicon.ico",
