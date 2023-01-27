@@ -10,7 +10,7 @@ const Episodes = () => {
     const [isSearched, setIsSearched] = useState(false);
     const [showLoading, setShowLoading] = useState(false);
     const [input, setInput] = useState();
-    let episodesList = [];
+    const [episodes, setEpisodes] = useState([]);
 
     const handleChange = (event) => {
         setInput(event.target.value);
@@ -18,17 +18,16 @@ const Episodes = () => {
 
     const handleSubmit = async(event) => {
         event.preventDefault();
-        let {results} = await getEpisodesByName(input);
-        
-        setTimeout(function(){
-            setShowLoading(false);
-            setIsSearched(false);
-        }, 3000);
-
         setShowLoading(true);
 
-        episodesList = results;
-        console.log(episodesList);
+        try {
+            const { results } = await getEpisodesByName(input);
+            setEpisodes(results);
+            setShowLoading(false);
+            setIsSearched(true);
+        } catch(err) {
+            console.log(err);
+        }
     }
 
     return (
@@ -45,16 +44,20 @@ const Episodes = () => {
 
             {!isSearched && <EpisodesCarousel />}
 
-            <div className="episodes-container">
-                {episodesList && episodesList.map((ep) => (
-                    <EpisodeCard 
+            {isSearched && 
+            <div>
+                <h1>Searched Episodios</h1>
+                <div className="episodes-container">
+                    {episodes && episodes.map((ep) => (
+                        <EpisodeCard 
                         airDate={ep.air_date}
                         episode={ep.episode}
                         name={ep.name}
                         key={ep.id}
-                    />
-                ))}
-            </div>
+                        />
+                        ))}
+                </div>
+            </div>}
            
         </>
     )
