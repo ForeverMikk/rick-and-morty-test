@@ -55,7 +55,7 @@ const Episodes = () => {
                         name={ep.name}
                         key={ep.id}
                         />
-                        ))}
+                    ))}
                 </div>
             </div>}
            
